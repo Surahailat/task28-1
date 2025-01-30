@@ -23,5 +23,10 @@ namespace task28_1
         {
 
         }
+
+        protected void update_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("edit.aspx");
+        }
     }
 }

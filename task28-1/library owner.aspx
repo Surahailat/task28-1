@@ -66,7 +66,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Update Book Information</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <asp:Button type="button" Text="Update Book Information" ID="Button3" runat="server" class="btn btn-primary" />
+                        <asp:Button type="button" Text="Update Book Information" ID="update" runat="server" class="btn btn-primary" OnClick="update_Click" />
                     </div>
                 </div>
 

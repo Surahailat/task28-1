@@ -15,7 +15,7 @@ namespace task28_1
         }
         protected void SeeRooms_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Meetings Rooms.aspx");
+            Response.Redirect("Meeting Rooms.aspx");
         }
 
         protected void SeeAllBook_Click(object sender, EventArgs e)

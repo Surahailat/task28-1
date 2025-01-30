@@ -12,7 +12,7 @@ namespace task28_1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            ViewRooms();
         }
         protected void ViewRooms()
         {

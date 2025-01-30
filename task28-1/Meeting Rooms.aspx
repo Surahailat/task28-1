@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <table class="table caption-top">
-                <h1 style="text-align: center; margin: 3%;">All Books</h1>
+                <h1 style="text-align: center; margin: 3%;">All Rooms</h1>
                 <div style="float: right; margin-right: 4%; margin-bottom: 3%">
                     <asp:Button ID="reserveRoom" Text="Reserve Meeting Room" runat="server" />
                 </div>
