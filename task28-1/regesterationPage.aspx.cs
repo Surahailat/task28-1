@@ -27,6 +27,20 @@ namespace task28_1
                 result.CssClass= "danger";
                 return;
             }
+            string[] regesteruser =File.ReadAllLines(file);
+            foreach (string lines in regesteruser)
+            {
+                string[] line=lines.Split(' ');
+                if (line[1] == form3Example3cg.Text)
+                {
+                    result.Text = "User Exist Already";
+                    result.Visible = true;
+                    result.CssClass = "danger";
+                }
+
+            }
+
+
             if (!File.Exists(file))
             {
 
@@ -35,7 +49,7 @@ namespace task28_1
                 
                     if (form3Example4cdg.Text == form3Example4cg.Text) 
                     {
-                            regest.WriteLine($"{form3Example1cg.Text} {form3Example3cg.Text} {form3Example4cg.Text} {form3Example4cdg.Text}");
+                            regest.WriteLine($"{form3Example1cg.Text} {form3Example3cg.Text} {form3Example4cg.Text} {form3Example4cdg.Text} false");
                     }
 
                     else
@@ -53,7 +67,7 @@ namespace task28_1
                 {
                     using (StreamWriter regest = new StreamWriter(file, true))
                     {
-                        regest.WriteLine($"{form3Example1cg.Text} {form3Example3cg.Text} {form3Example4cg.Text} {form3Example4cdg.Text}");
+                        regest.WriteLine($"{form3Example1cg.Text} {form3Example3cg.Text} {form3Example4cg.Text} {form3Example4cdg.Text} false");
 
                     }
                     Response.Redirect("Loginpage.aspx");

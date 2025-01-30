@@ -28,13 +28,17 @@ namespace task28_1
                 return;
             }
             string[] usersData = File.ReadAllLines(file);
-            foreach (var user in usersData)
+            for (int i=0; i< usersData.Length;i++)
             {
-                string[] userData = user.Split(' ');
+                string[] userData = usersData[i].Split(' ');
 
                 if (userData[1] == form3Example3cg.Text && userData[2] == form3Example4cg.Text)
                 {
+                    userData[4] = "true";
+                    usersData[i]=$"{userData[0]} {userData[1]} {userData[2]} {userData[3]} {userData[4]}";
+                    File.WriteAllLines(file, usersData);
                     Response.Redirect("powersStudents.aspx");
+                    return;
                 }
                 else
                 {
@@ -42,13 +46,19 @@ namespace task28_1
                     result.CssClass = "danger";
                     result.Visible = true;
                 }
+                string nameAdmin = "admin@gmail.com";
+                string passAdmin = "12345";
+                if (form3Example3cg.Text == nameAdmin && form3Example4cg.Text == passAdmin)
+                {
+                    userData[4] = "true";
+                    usersData[i] = $"{userData[0]} {userData[1]} {userData[2]} {userData[3]} {userData[4]}";
+                    File.WriteAllLines(file, usersData);
+                    Response.Redirect("library owner.aspx");
+
+                    return;
+                }
             }
-            string nameAdmin = "admin@gmail.com";
-            string passAdmin = "12345";
-            if (form3Example3cg.Text == nameAdmin && form3Example4cg.Text == passAdmin)
-            {
-                Response.Redirect("library owner.aspx");
-            }
+
         }
     }
 }

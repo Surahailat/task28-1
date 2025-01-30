@@ -79,6 +79,7 @@
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                             <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
                             <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+                            <asp:Button runat="server" ID="logout" Text="Logout" class="breadcrumb-item" OnClick="logout_Click"  />
                         </ol>
                     </nav>
                     <!-- /Breadcrumb -->
@@ -105,34 +106,38 @@
                         <div class="col-md-8">
                             <div class="card mb-3">
                                 <div class="card-body">
-                                    <div class="row" id="UserData" runat="server">
+                                    <div class="row" runat="server">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Full Name</h6>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            Kenneth Valdez
-                                        </div>
+                                        <asp:TextBox ID="Name" runat="server" class="col-sm-9 text-secondary"></asp:TextBox>
                                     </div>
                                     <hr>
                                     <div class="row">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Email</h6>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            fip@jukmuh.al
-                                        </div>
+                                        <asp:TextBox ID="Editemail" runat="server" class="col-sm-9 text-secondary"></asp:TextBox>
+
                                     </div>
 
                                     <hr>
                                     <div class="row">
                                         <div class="col-sm-3">
-                                            <h6 class="mb-0">Email</h6>
+                                            <h6 class="mb-0">Password</h6>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            fip@jukmuh.al
-                                        </div>
+                                        <asp:TextBox ID="Password" runat="server" class="col-sm-9 text-secondary"></asp:TextBox>
+
                                     </div>
 
+                                    <hr>
+                                                                        <div class="row">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Password</h6>
+                                        </div>
+                                        <asp:TextBox ID="confirm" runat="server" class="col-sm-9 text-secondary"></asp:TextBox>
+
+                                    </div>
                                     <hr>
 
                                     <div class="row">
@@ -141,6 +146,7 @@
 
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
